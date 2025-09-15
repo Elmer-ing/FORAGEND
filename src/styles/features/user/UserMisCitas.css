@@ -1,0 +1,124 @@
+.misCitas {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.misCitas__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  height: 20px;
+}
+
+.misCitas__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  /* align-items: center; */
+}
+
+.misCitas__cards {
+  width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.misCitas__scroll-container {
+  width: 400px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ======================================
+   NAVEGACIÓN - OCULTA EN MÓVIL
+   ====================================== */
+
+.misCitas__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.misCitas__nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.misCitas__nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.misCitas__nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Indicadores */
+.misCitas__indicators {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.misCitas__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.misCitas__indicator:hover {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.misCitas__indicator--active {
+  background: var(--primary-color);
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .misCitas__content {
+    grid-template-columns: 1fr;
+  }
+  .misCitas__scroll-container {
+    overflow-x: auto;
+  }
+}

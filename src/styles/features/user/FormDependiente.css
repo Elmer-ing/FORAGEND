@@ -1,0 +1,138 @@
+.formulario-dependiente {
+  max-width: 900px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+  overflow-y: auto;
+}
+
+.formulario-dependiente__titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.formulario-dependiente__grupo-campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.formulario-dependiente__leyenda {
+  grid-column: 1 / -1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.formulario-dependiente__campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-dependiente__campo:first-of-type {
+  grid-column: 1 / -1; /* el campo de "Nombres" ocupa ambas columnas */
+}
+
+.formulario-dependiente__etiqueta {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.formulario-dependiente__entrada,
+.formulario-dependiente__selector {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-dependiente__entrada:focus,
+.formulario-dependiente__selector:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.formulario-dependiente__entrada--error,
+.formulario-dependiente__selector--error {
+  border-color: #e74c3c;
+  background-color: #fdecea;
+}
+
+.formulario-dependiente__mensaje-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.formulario-dependiente__mensaje-exito {
+  color: #27ae60;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.formulario-dependiente__boton-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.formulario-dependiente__boton-enviar {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.formulario-dependiente__boton-enviar:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.formulario-dependiente__boton-enviar:hover:not(:disabled) {
+  background-color: #27ae60;
+}
+
+/* Responsive (una columna en móviles) */
+@media (max-width: 640px) {
+  .formulario-dependiente {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .formulario-dependiente__grupo-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-dependiente__campo {
+    width: 100%;
+  }
+
+  .formulario-dependiente__selector,
+  .formulario-dependiente__entrada {
+    width: 100%;
+  }
+
+  .formulario-dependiente__campo:first-of-type {
+    grid-column: 1;
+  }
+}
