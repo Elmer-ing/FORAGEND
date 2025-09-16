@@ -26,7 +26,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/waiquiquii/FORAGEND.git
+   git clone git@github.com:Elmer-ing/FORAGEND.git
    ```
 
 2. Accede al directorio del proyecto:
