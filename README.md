@@ -40,14 +40,26 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
    ```bash
    npm install
    ```
+4. Configuración del Entorno
+   Para el correcto funcionamiento de esta aplicación web, es necesario configurar las variables de entorno. Por motivos de seguridad y para facilitar el despliegue en diferentes entornos, este repositorio no incluye el archivo .env con las credenciales de Firebase.
 
-4. Inicia el servidor de desarrollo:
+   Edita el archivo llamado .env en el directorio raíz del proyecto y añade las siguientes variables con los valores correspondientes a tu proyecto de Firebase:
+
+   ```bash
+   VITE_FIREBASE_API_KEY=tu_api_key_aqui
+   VITE_FIREBASE_AUTH_DOMAIN=tu_auth_domain_aqui
+   VITE_FIREBASE_PROJECT_ID=tu_project_id_aqui
+   VITE_FIREBASE_STORAGE_BUCKET=tu_storage_bucket_aqui
+   VITE_FIREBASE_MESSAGING_SENDER_ID=tu_messaging_sender_id_aqui
+   VITE_FIREBASE_APP_ID=tu_app_id_aqui
+   ```
+5. Inicia el servidor de desarrollo:
 
    ```bash
    npm run dev
    ```
 
-5. Abre tu navegador y accede a:
+6. Abre tu navegador y accede a:
 
    ```bash
    http://localhost:5173
